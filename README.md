@@ -19,14 +19,10 @@
 
   ## 编译与下载
 
-  本仓库仅提供 C 源码，你可以使用任意 C51 工具链：
+  本仓库仅提供 C 源码，你可以使用任意 IDE 编写：
 
   - Keil C51：建立工程后，将 `driver/*.c` 与 `user/main.c` 全部加入工程，目标芯片选择 `STC15F2K60S2`，按需配置晶振与下载
   工具。
-  - SDCC（示例命令，需自行调整路径）：
-    ```bash
-    sdcc --model-small user/main.c driver/*.c
-    packihx main.ihx > main.hex
 
   生成的 HEX 文件可使用 STC 官方下载工具烧录。
 
@@ -37,6 +33,13 @@
       - 使用 Key_Proc()、Led_Proc()、Seg_Proc() 等函数组织主循环逻辑。
   - 建议在此基础上完成蓝桥杯真题：只改动应用层逻辑，尽量复用驱动接口，可大幅缩短调试时间。
 
+  ##源码克隆/下载
+  - 若在电脑上安装了 `git` ,即可在 `powershell` 里使用命令 ：
+  ```bash
+  git clone https://github.com/ThAce-code/LANQIAO_API.git 
+  ```
+  -若未安装 `git` ,可在 **code** 里选择 **DOWNLOAD ZIP**
+  ![100](image.png)
   ## 注意事项
 
   - 建议保持文件编码为 UTF-8，方便跨平台编辑。
